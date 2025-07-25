@@ -1,0 +1,31 @@
+{
+  "name": "plate-recognizer-dashboard",
+  "version": "1.0.0",
+  "description": "Comprehensive ALPR dashboard showcasing Plate Recognizer capabilities",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Static site - no build required'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "alpr",
+    "license-plate-recognition",
+    "computer-vision",
+    "api",
+    "dashboard"
+  ],
+  "author": "Plate Recognizer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parkpow/deep-license-plate-recognition.git"
+  },
+  "homepage": "https://platerecognizer.com",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

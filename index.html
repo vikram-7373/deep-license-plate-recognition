@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plate Recognizer - ALPR Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .feature-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-car text-3xl text-blue-600"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">Plate Recognizer</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#features" class="text-gray-600 hover:text-blue-600 transition">Features</a>
+                    <a href="#products" class="text-gray-600 hover:text-blue-600 transition">Products</a>
+                    <a href="#integrations" class="text-gray-600 hover:text-blue-600 transition">Integrations</a>
+                    <a href="#docs" class="text-gray-600 hover:text-blue-600 transition">Documentation</a>
+                </div>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold mb-6">Automatic License Plate Recognition</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Get high-accuracy, developer-friendly ALPR software powered by state-of-the-art deep neural networks. 
+                Works on dark, low-res, blurry images and supports 90+ countries worldwide.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="startDemo()" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    <i class="fas fa-play mr-2"></i>Try Demo
+                </button>
+                <button onclick="scrollToProducts()" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+                    View Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Why Choose Plate Recognizer?</h3>
+                <p class="text-xl text-gray-600">Advanced ALPR technology that works in challenging conditions</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <i class="fas fa-eye feature-icon text-5xl mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-3">Works in Tough Conditions</h4>
+                    <p class="text-gray-600">Processes dark, low-res, blurry images and tough angles across all vehicle types</p>
+                </div>
+                <div class="text-center p-6">
+                    <i class="fas fa-globe feature-icon text-5xl mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-3">Global Coverage</h4>
+                    <p class="text-gray-600">Optimized for 50 USA States, India, Brazil, and 90+ countries worldwide</p>
+                </div>
+                <div class="text-center p-6">
+                    <i class="fas fa-bolt feature-icon text-5xl mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-3">Fast & Accurate</h4>
+                    <p class="text-gray-600">Inference speed up to 21ms with high accuracy recognition rates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Our Products</h3>
+                <p class="text-xl text-gray-600">Choose the right solution for your needs</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Snapshot -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-camera text-3xl text-blue-600 mr-4"></i>
+                        <h4 class="text-2xl font-bold">Snapshot</h4>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Get license plate recognition from images in under 60 minutes. 
+                        Simple REST API with fast inference speed up to 21ms.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>REST API integration</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>JSON response or webhooks</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>On-premise deployment</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>8 programming languages</li>
+                    </ul>
+                    <button onclick="openSnapshotDemo()" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+                        Try Snapshot
+                    </button>
+                </div>
+
+                <!-- Stream -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-video text-3xl text-purple-600 mr-4"></i>
+                        <h4 class="text-2xl font-bold">Stream</h4>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Real-time license plate recognition from camera feeds or video files. 
+                        Handles 4 cameras simultaneously on mid-range PC.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Real-time processing</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>CSV file or webhooks</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Multiple camera support</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Video file processing</li>
+                    </ul>
+                    <button onclick="openStreamDemo()" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition">
+                        Try Stream
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Live Demo</h3>
+                <p class="text-xl text-gray-600">Upload an image to see our ALPR technology in action</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-xl p-8">
+                <div class="border-2 border-dashed border-gray-300 rounded-lg p-12 text-center" id="dropZone">
+                    <i class="fas fa-cloud-upload-alt text-5xl text-gray-400 mb-4"></i>
+                    <p class="text-xl text-gray-600 mb-4">Drop an image here or click to upload</p>
+                    <input type="file" id="imageInput" accept="image/*" class="hidden">
+                    <button onclick="document.getElementById('imageInput').click()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                        Choose Image
+                    </button>
+                </div>
+                
+                <div id="demoResults" class="mt-8 hidden">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">Uploaded Image</h4>
+                            <img id="uploadedImage" class="w-full rounded-lg shadow-lg">
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">Recognition Results</h4>
+                            <div id="resultsContainer" class="bg-white p-6 rounded-lg shadow">
+                                <div class="animate-pulse">
+                                    <div class="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                                    <div class="h-4 bg-gray-200 rounded w-1/2 mb-2"></div>
+                                    <div class="h-4 bg-gray-200 rounded w-5/6"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations Section -->
+    <section id="integrations" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Integrations & Tools</h3>
+                <p class="text-xl text-gray-600">Comprehensive ecosystem of tools and integrations</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <i class="fas fa-code text-3xl text-blue-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-3">Code Samples</h4>
+                    <p class="text-gray-600 mb-4">Ready-to-use examples in C++, C#, Java, Python, and more</p>
+                    <button onclick="viewCodeSamples()" class="text-blue-600 hover:text-blue-800 font-semibold">
+                        View Samples <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <i class="fas fa-webhook text-3xl text-green-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-3">Webhooks</h4>
+                    <p class="text-gray-600 mb-4">Real-time data forwarding with custom webhook integrations</p>
+                    <button onclick="viewWebhooks()" class="text-green-600 hover:text-green-800 font-semibold">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <i class="fas fa-tools text-3xl text-purple-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-3">Management Tools</h4>
+                    <p class="text-gray-600 mb-4">Docker installers, monitoring tools, and utilities</p>
+                    <button onclick="viewTools()" class="text-purple-600 hover:text-purple-800 font-semibold">
+                        Explore Tools <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Documentation & Resources</h3>
+                <p class="text-xl text-gray-600">Everything you need to get started</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center p-6">
+                    <i class="fas fa-rocket text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-lg font-semibold mb-2">Quick Start</h4>
+                    <p class="text-gray-600 text-sm">Get up and running in minutes</p>
+                </div>
+                <div class="text-center p-6">
+                    <i class="fas fa-book text-4xl text-green-600 mb-4"></i>
+                    <h4 class="text-lg font-semibold mb-2">API Reference</h4>
+                    <p class="text-gray-600 text-sm">Complete API documentation</p>
+                </div>
+                <div class="text-center p-6">
+                    <i class="fas fa-graduation-cap text-4xl text-purple-600 mb-4"></i>
+                    <h4 class="text-lg font-semibold mb-2">Tutorials</h4>
+                    <p class="text-gray-600 text-sm">Step-by-step guides</p>
+                </div>
+                <div class="text-center p-6">
+                    <i class="fas fa-life-ring text-4xl text-red-600 mb-4"></i>
+                    <h4 class="text-lg font-semibold mb-2">Support</h4>
+                    <p class="text-gray-600 text-sm">Get help when you need it</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-car text-2xl"></i>
+                        <span class="text-xl font-bold">Plate Recognizer</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Advanced ALPR technology for parking, security, and traffic management.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Products</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Snapshot SDK</a></li>
+                        <li><a href="#" class="hover:text-white transition">Stream</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cloud API</a></li>
+                        <li><a href="#" class="hover:text-white transition">ParkPow</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Resources</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition">Code Samples</a></li>
+                        <li><a href="#" class="hover:text-white transition">Benchmarks</a></li>
+                        <li><a href="#" class="hover:text-white transition">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Company</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">About</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Plate Recognizer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for demos -->
+    <div id="demoModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <div class="bg-white rounded-xl p-8 max-w-2xl w-full mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold" id="modalTitle">Demo</h3>
+                <button onclick="closeDemoModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div id="modalContent">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
